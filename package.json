@@ -1,0 +1,33 @@
+{
+  "name": "@coronling/modal",
+  "version": "0.9.5",
+  "authors": [
+    {
+      "name": "Simon Raichl",
+      "homepage": "https://github.com/velociraptorcze"
+    }
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coronling/modal.git"
+  },
+  "author": "Simon Raichl",
+  "homepage": "https://github.com/Coronling/modal#readme",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup": "^2.7.5"
+  },
+  "description": "Lightweight and easy to use modal",
+  "keywords": [
+    "modal"
+  ]
+}
