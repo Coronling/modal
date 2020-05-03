@@ -22,19 +22,26 @@ const initializeModal = modalId => {
         modalElement.classList[mode]("active");
     };
 
+    const openModal = setModalActive("add");
+    const closeModal = setModalActive("remove");
+
     modalElement.addEventListener("mouseup", ({ target }) => {
         if (target === modalElement) {
-            setModalActive("remove")();
+            closeModal();
         }
     });
 
     openTriggers.forEach(trigger => {
-        trigger.addEventListener("click", setModalActive("add"));
+        trigger.addEventListener("click", openModal);
     });
 
     closeTriggers.forEach(trigger => {
-        trigger.addEventListener("click", setModalActive("remove"));
+        trigger.addEventListener("click", closeModal);
     });
+
+    if (modalElement.dataset.hasOwnProperty("isOpen")) {
+        openModal();
+    }
 };
 
 export { modal, initializeModal };
